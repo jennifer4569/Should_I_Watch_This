@@ -1,0 +1,44 @@
+Team JAIMS Smith
+Jennifer Zhang
+Alessandro Cartegni
+Ibnul Jahan
+Michael Ruvinshteyn
+============================================================
+
+jenniferZ -- 2017-11-13 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+alessandroC -- 2017-11-13 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+ibnulJ -- 2017-11-13 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+michaelR -- 2017-11-13 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+jenniferZ -- 2017-11-14 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+alessandroC -- 2017-11-14 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+ibnulJ -- 2017-11-14 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+michaelR -- 2017-11-14 13:19
+Researched/Tested out APIs, brainstorming ideas for project
+
+jenniferZ -- 2017-11-15 13:19
+Decided on project ideas and which APIs to use, started on component map
+
+alessandroC -- 2017-11-15 13:19
+Decided on project ideas and which APIs to use, started on component map
+
+ibnulJ -- 2017-11-15 13:19
+Decided on project ideas and which APIs to use, started on component map
+
+michaelR -- 2017-11-15 13:19
+Decided on project ideas and which APIs to use, started on component map
+
+
