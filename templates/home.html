@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content%}
+<center>
+  <h1>Should I Watch This?</h1>
+
+  <h3>Search for a Movie</h3>
+  <p>You do not need to be logged in for this!<p>
+  <br><form action="/search", method = "POST">
+    <input type="text" name="search" placeholder="Title"><br>
+    <input type="submit" value="Search">
+  </form>
+  
+</center>
+{% endblock %}
