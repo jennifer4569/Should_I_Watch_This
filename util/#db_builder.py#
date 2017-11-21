@@ -1,0 +1,2 @@
+def create_db():
+    command = "CREATE TABLE users VALUES 
