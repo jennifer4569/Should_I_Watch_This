@@ -56,3 +56,6 @@ Worked on site map and reviewed design document
 michaelR -- 2017-11-16 13:01
 Worked on site map and reviewed design document
 
+alessandroC -- 2017-11-21 13:14
+Added /templates, base.html, and home.html
+
