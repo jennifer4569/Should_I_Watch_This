@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+      <title>
+        {% block title %} {% endblock %}
+        Webpage
+      </title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+      No hablo queso
+    {% endblock %}
+
+    {% block footer %}
+      <center>
+        <br>
+        <form action="/logout" method = "GET">
+          <input type="submit" value="Log Out">
+          | <a href="/home">Home</a>
+        </form>
+        <br>
+        <small> &copy; JAIMS Smith 2017</small>
+      </center>
+    {% endblock %}
+  </body>
+</html>
