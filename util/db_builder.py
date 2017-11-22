@@ -3,7 +3,10 @@ import csv       #facilitates CSV I/O
 import os #Used for os.remove()
 
 f="moviematchers.db"
-os.remove(f) #Used During Testing to remove file at the beginning
+try:
+    os.remove(f) #Used During Testing to remove file at the beginning
+except:
+    print "Did not find table to remove"
 
 db = sqlite3.connect(f) #open if f exists, otherwise create
 c = db.cursor()    #facilitate db ops
