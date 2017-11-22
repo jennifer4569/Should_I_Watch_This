@@ -69,9 +69,6 @@ Added /templates, base.html, and home.html
 ibnulJ -- 2017-11-21 14:19
 Started on creating database tables
 
-michaelR -- 2017-11-22 12:58
-Imported db_builder.py from util into app.py
-
 ibnulJ -- 2017-11-22 13:01:03
 Added the beginning basic methods required for building and adding to databases
 
