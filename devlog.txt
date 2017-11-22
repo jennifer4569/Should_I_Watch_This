@@ -1,4 +1,5 @@
 Team JAIMS Smith
+
 Jennifer Zhang
 Alessandro Cartegni
 Ibnul Jahan
@@ -56,6 +57,14 @@ Worked on site map and reviewed design document
 michaelR -- 2017-11-16 13:01
 Worked on site map and reviewed design document
 
+ibnulJ -- 2017-11-16 13:14
+Finalized design document and added to github
+
+ibnulJ -- 2017-11-21 13:08
+Started on Flask app
+
 alessandroC -- 2017-11-21 13:14
 Added /templates, base.html, and home.html
 
+ibnulJ -- 2017-11-21 14:19
+Started on creating database tables
