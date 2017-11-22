@@ -3,10 +3,7 @@ import csv       #facilitates CSV I/O
 import os #Used for os.remove()
 
 f="moviematchers.db"
-try:
-    os.remove(f) #Used During Testing to remove file at the beginning
-except:
-    print "Did not find table to remove"
+os.remove(f) #Used During Testing to remove file at the beginning
 
 db = sqlite3.connect(f) #open if f exists, otherwise create
 c = db.cursor()    #facilitate db ops
@@ -17,7 +14,7 @@ def create_db():
     c.execute(command)
     command = "INSERT INTO users VALUES(1,'ibnul','ibnul','ibnul','ibnul')"
     c.execute(command)
-    command = "CREATE TABLE movie(overview TEXT, reviews REAL, recommendations TEXT, ratings TEXT)"
+    command = "CREATE TABLE movies(name TEXT, overview TEXT, reviews TEXT, recommendations TEXT, ratings REAL)"
     c.execute(command)
 
 def add_user(username, password):
@@ -30,9 +27,13 @@ def add_user(username, password):
     command = "INSERT INTO users VALUES(" + str(id) + ",'" + username + "','" + password + "','','')"
     c.execute(command)
 
+def add_movie(name):
+    command = "INSERT INTO movies VALUES('" + name + "','This is a description','Wonderful.,cool!','The Dark Knight, Pokemon',4.78)"
+    c.execute(command)
     
 create_db();
 add_user("hi","hey")
+add_movie("The Dark Knight Rises")
 
 db.commit() #save changes
 db.close()  #close database
