@@ -2,8 +2,6 @@
 
 from flask import Flask, session, render_template, request, redirect, url_for, flash
 
-from util.db_builder import *
-
 app = Flask(__name__)
 
 @app.route("/")
