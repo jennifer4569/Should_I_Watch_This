@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content%}
+<center>
+  <h1>Your Profile</h1>
+  <table>
+    <tr>
+      <th>History</th>
+      <th>Liked</th>
+    </tr>
+    <tr>
+      <td>{{history}}</td>
+      <td>{{liked}}</td>
+    </tr>
+  </table>
+
+</center>
+{% endblock %}
