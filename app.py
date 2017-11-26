@@ -2,7 +2,7 @@
 
 from flask import Flask, session, render_template, request, redirect, url_for, flash
 
-import db_builder
+import util.db_builder
 
 app = Flask(__name__)
 

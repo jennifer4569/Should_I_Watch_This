@@ -2,7 +2,7 @@ import sqlite3   #enable control of an sqlite database
 import csv       #facilitates CSV I/O
 import os #Used for os.remove()
 
-f="moviematchers.db"
+f="util/moviematchers.db"
 try:
     os.remove(f) #Used During Testing to remove file at the beginning
 except:
