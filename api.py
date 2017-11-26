@@ -24,3 +24,13 @@ def nyt_info(title):
         print "Error: API key was set up incorrectly!"
         return -1
 
+def tastedive_info(title):
+    try:
+        global tastedive_url
+        url = tastedove_url + title.replace(" ", "%20")
+        uread = urllib2.urlopen(url).read()
+        udict = json.loads(uread)
+        return udict
+    except:
+        print "Error: API key was set up incorrectly!"
+        return -1

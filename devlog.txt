@@ -81,3 +81,5 @@ Added login to home.html, added profile.html for history etc
 jenniferZ -- 2017-11-25 19:34:11
 updated README and worked on API movie search
 
+michaelR -- 2017-11-25 19:43
+Updated API movie search to find similar movies
