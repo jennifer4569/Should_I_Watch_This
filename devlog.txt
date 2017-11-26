@@ -86,6 +86,10 @@ Updated API movie search to find similar movies
 
 michaelR -- 2017-11-25 20:04
 Facilitated working with database from app.py
+
 michaelR -- 2017-11-25 20:27:09
 worked on TasteDive API
+
+michaelR -- 2017-11-26 17:29
+facilitated display of recommended movies based on query - problems loading API key present
 

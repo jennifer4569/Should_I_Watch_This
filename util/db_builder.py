@@ -41,7 +41,36 @@ def add_movie(name):
     c.execute(command)
     db.commit()
     db.close()
+
+def check_movie(name):
+    db = sqlite3.connect(f)
+    c = db.cursor()
+    command = "SELECT name FROM movies"
+    movies = []
+    for row in c.execute(command):
+        movies.append(row[0])
+    if name in movies:
+        return True
+    else:
+        return False
+
+def auth_user(username,password):
+    db = sqlite3.connect(f)
+    c = db.cursor()
+    command = "SELECT username,password FROM users"
+    d = {}
+    for row in c.execute(command):
+        d[row[0]] = row[1]
+    if username in d:
+        if d[username] == password:
+            return True
+        else:
+            return False
+    else:
+        return False
+    db.commit()
+    db.close()
     
-create_db();
+create_db()
 add_user("hi","hey")
 add_movie("The Dark Knight Rises")
