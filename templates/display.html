@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{title}}
+{% endblock %}
+
+{% block content%}
+<center>
+  <h1>{{title}}</h1>
+  <img src={{poster}} alt="Poster for {{title}}" title="Poster for {{title}}">
+  <h3>Director: {{director}}</h3>
+  <h4>Actors: {{actors}}</h4>
+  <p>{{plot}}</p>
+  <br>
+  <h2>NYT Movie Review</h2>
+  {{review}}
+  <br>
+  <h2>Recommended Related Movies</h2>
+  {{recommended}}
+  
+</center>
+{% endblock %}
