@@ -27,7 +27,7 @@ def nyt_info(title):
 def tastedive_info(title):
     try:
         global tastedive_url
-        url = tastedove_url + title.replace(" ", "%20")
+        url = tastedive_url + "&q=" + title.replace(" ", "%20")
         uread = urllib2.urlopen(url).read()
         udict = json.loads(uread)
         return udict
