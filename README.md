@@ -13,7 +13,6 @@ ___
 *Should I Watch This?* is an application that provides information about a movie, including titles, reviews, and recommendations. Logging in gives you access tomore features, such as getting your movie recommendations based on your search history.
 
 ### Instructions on how to run (Including how to procure API keys.)
-     Assume your audience is cloning your repo and running from localhost.
 1. Open command prompt, and, from there, navigate to the desired directory.
 2. Clone the repository:
    * ```git clone https://github.com/jennifer4569/p01.git```
@@ -53,12 +52,12 @@ ___
     * Make sure to replace <> with their respective links. (Refer to step 4 for the respective instructions)
     	* For example, if:
     		* The url given for the OMDb API was http://www.omdbapi.com/?i=tt3896198&apikey=asijdfoi
-    		* The API key given for the NYT API was 2109380912388uwfjosfdalkj
+    		* The API key given for the NYT API was 2109380912388uwfjosfd
     		* 
     	* Then the first 3 lines should look like:
     		```
         	omdb_url = "http://www.omdbapi.com/?i=tt3896198&apikey=asijdfoi"
-  			nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=2109380912388uwfjosfdalkj"
+  			nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=2109380912388uwfjosfd"
     		tastedive_url = ""
 	        ```
 6. Run the program.

@@ -77,3 +77,7 @@ Added the beginning basic methods required for building and adding to databases
 
 alessandroC -- 2017-11-21 13:14
 Added login to home.html, added profile.html for history etc
+
+jenniferZ -- 2017-11-25 19:34:11
+updated README and worked on API movie search
+
