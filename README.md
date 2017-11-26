@@ -57,7 +57,7 @@ ___
     	* Then the first 3 lines should look like:
     		```
         	omdb_url = "http://www.omdbapi.com/?i=tt3896198&apikey=asijdfoi"
-  		nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=2109380912388uwfjosfd"
+  			nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=2109380912388uwfjosfd"
     		tastedive_url = "https://tastedive.com/api/similar?k=9asdfjkl12038"
 	        ```
 6. Run the program.
