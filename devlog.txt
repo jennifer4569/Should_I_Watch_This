@@ -95,3 +95,6 @@ facilitated display of recommended movies based on query - problems loading API 
 
 michaelR -- 2017-11-26 17:54
 added NYT API to display page
+
+michaelR -- 2017-11-26 18:08
+added OMDB API to display page

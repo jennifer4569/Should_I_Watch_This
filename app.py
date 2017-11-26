@@ -26,12 +26,22 @@ def search():
         NYT_link = nyt_results[0]['link']['url']
         NYT_desc = nyt_results[0]['link']['suggested_link_text']
         #--------------------------------------------------------
+
+        #OMDB API-----------------------------------------------=
+        omdb_info = api.omdb_info(movie)
+        DIRECTOR = omdb_info['Director']
+        PLOT = omdb_info['Plot']
+        ACTORS = omdb_info['Actors']
+        POSTER = omdb_info['Poster']
+        #--------------------------------------------------------
+        
         #tastedive_info = api.tastedive_info(movie)
         #if tastedive_info == -1:
             #TASTEDIVE = "No similar results found"
         #else:
             #results = tastedive_info['Results']
-        return render_template("display.html", title = TITLE, review_link = NYT_link, review_title = NYT_desc)
+        return render_template("display.html", title = TITLE, review_link = NYT_link, review_title = NYT_desc, \
+                               director = DIRECTOR, actors = ACTORS, plot = PLOT, poster = POSTER)
     except:
         return redirect(url_for("home"))
 

@@ -16,7 +16,7 @@ def omdb_info(title):
 def nyt_info(title):
     try:
         global nyt_url
-        url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=7e66bca8ed8d4c4a87789faec87abf66" + "&query=" + title.replace(" ", "%20")
+        url = nyt_url + "&query=" + title.replace(" ", "%20")
         uread = urllib2.urlopen(url).read()
         udict = json.loads(uread)
         return udict
