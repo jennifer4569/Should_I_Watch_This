@@ -42,27 +42,23 @@ ___
 	   		* For application name, put "Should I Watch This?"
 	   		* For description, put "This app gets movie recommendations."
    		4. Press save, and then copy your API access key.
-   		5. Refer to step 5 below. 
+   		5. Refer to step 5 below. Replace **\<TasteDive API Key>** with the key you were given in the last step
 5. Go to api.py, and on the first 3 lines, paste the following:
     ```
    	omdb_url = "<OMDB API URL>"
   	nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=<NYT API KEY>"
-    tastedive_url = ""
+   	tastedive_url = "https://tastedive.com/api/similar?k=<TasteDive API Key>"
     ```
     * Make sure to replace <> with their respective links. (Refer to step 4 for the respective instructions)
     	* For example, if:
     		* The url given for the OMDb API was http://www.omdbapi.com/?i=tt3896198&apikey=asijdfoi
     		* The API key given for the NYT API was 2109380912388uwfjosfd
-    		* 
+    		* The API key given for the TasteDive API was 9asdfjkl12038
     	* Then the first 3 lines should look like:
     		```
         	omdb_url = "http://www.omdbapi.com/?i=tt3896198&apikey=asijdfoi"
-  			nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=2109380912388uwfjosfd"
-    		tastedive_url = ""
+  		nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=2109380912388uwfjosfd"
+    		tastedive_url = "https://tastedive.com/api/similar?k=9asdfjkl12038"
 	        ```
 6. Run the program.
    * ```python app.py```
-
-### Dependencies and how to install/procure them
-
-### Commands
