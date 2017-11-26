@@ -20,12 +20,18 @@ def search():
         else:
             util.db_builder.add_movie(movie)
         TITLE = movie
-        tastedive_info = api.tastedive_info(movie)
-        if tastedive_info == -1:
-            TASTEDIVE = "No similar results found"
-        else:
-            results = tastedive_info['Results']
-        return render_template("display.html", title = TITLE, recommended = results, tastedive_error = TASTEDIVE)
+        #NYT API-------------------------------------------------
+        nyt_info = api.nyt_info(movie)
+        nyt_results = nyt_info['results']
+        NYT_link = nyt_results[0]['link']['url']
+        NYT_desc = nyt_results[0]['link']['suggested_link_text']
+        #--------------------------------------------------------
+        #tastedive_info = api.tastedive_info(movie)
+        #if tastedive_info == -1:
+            #TASTEDIVE = "No similar results found"
+        #else:
+            #results = tastedive_info['Results']
+        return render_template("display.html", title = TITLE, review_link = NYT_link, review_title = NYT_desc)
     except:
         return redirect(url_for("home"))
 

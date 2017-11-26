@@ -93,3 +93,5 @@ worked on TasteDive API
 michaelR -- 2017-11-26 17:29
 facilitated display of recommended movies based on query - problems loading API key present
 
+michaelR -- 2017-11-26 17:54
+added NYT API to display page
