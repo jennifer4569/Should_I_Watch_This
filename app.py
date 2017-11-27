@@ -30,6 +30,7 @@ def search():
         TITLE = movie
         #NYT API-------------------------------------------------
         nyt_info = api.nyt_info(movie)
+        print "is in nyt"
         #print nyt_info
         nyt_results = nyt_info['results']
         #print nyt_results
@@ -41,6 +42,7 @@ def search():
 
         #OMDB API-----------------------------------------------=
         omdb_info = api.omdb_info(movie)
+        print "is in omdb"
         DIRECTOR = omdb_info['Director']
         PLOT = omdb_info['Plot']
         ACTORS = omdb_info['Actors']

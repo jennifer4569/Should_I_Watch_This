@@ -79,6 +79,6 @@ def auth_user(username,password):
     db.close()
 
 
-#create_db()
+create_db()
 #add_user("hi","hey")
 #add_movie("The Dark Knight Rises")
