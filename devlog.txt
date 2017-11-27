@@ -66,6 +66,9 @@ Started on Flask app
 alessandroC -- 2017-11-21 13:14
 Added /templates, base.html, and home.html
 
+alessandroC -- 2017-11-21 13:14
+Added login to home.html, added profile.html for history etc
+
 ibnulJ -- 2017-11-21 14:19
 Started on creating database tables
 
@@ -74,9 +77,6 @@ Fixed opening database if it already exists (try/except block)
 
 ibnulJ -- 2017-11-22 13:01:03
 Added the beginning basic methods required for building and adding to databases
-
-alessandroC -- 2017-11-21 13:14
-Added login to home.html, added profile.html for history etc
 
 jenniferZ -- 2017-11-25 19:34:11
 updated README and worked on API movie search
