@@ -98,3 +98,7 @@ added NYT API to display page
 
 michaelR -- 2017-11-26 18:08
 added OMDB API to display page
+
+ibnulJ -- 2017-11-26 22:36:35
+Made it so the databases connected to the APIs for the movies and stored information from them
+

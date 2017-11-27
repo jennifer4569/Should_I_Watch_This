@@ -3,6 +3,7 @@ import csv       #facilitates CSV I/O
 import os #Used for os.remove()
 
 f="util/moviematchers.db"
+g = "moviematchers.db"
 try:
     os.remove(f) #Used During Testing to remove file at the beginning
 except:
@@ -13,8 +14,8 @@ def create_db():
     c = db.cursor()
     command = "CREATE TABLE users(id INTEGER, username TEXT, password TEXT, liked_movies TEXT, search_history TEXT)"
     c.execute(command)
-    command = "INSERT INTO users VALUES(1,'ibnul','ibnul','ibnul','ibnul')"
-    c.execute(command)
+    #command = "INSERT INTO users VALUES(1,'ibnul','ibnul','ibnul','ibnul')"
+    #c.execute(command)
     command = "CREATE TABLE movies(name TEXT, overview TEXT, reviews TEXT, recommendations TEXT, ratings REAL)"
     c.execute(command)
     db.commit()
@@ -28,16 +29,22 @@ def add_user(username, password):
     id = c.fetchone()
     if (id == None):
         id = 0
-    id = id[0] +1
+    else:
+        id = id[0] +1
     command = "INSERT INTO users VALUES(" + str(id) + ",'" + username + "','" + password + "','','')"
     c.execute(command)
     db.commit()
     db.close()
 
-def add_movie(name):
+def add_movie(name,description,reviews,recommendation,rating):
+    #reviews = omdb_info['Plot']
+    #recommendation = omdb_info['Plot']
     db = sqlite3.connect(f)
     c = db.cursor()
-    command = "INSERT INTO movies VALUES('" + name + "','This is a description','Wonderful.,cool!','The Dark Knight, Pokemon',4.78)"
+    #command = "INSERT INTO movies VALUES('" + name + "','This is a description','Wonderful.,cool!','The Dark Knight, Pokemon',4.78)"
+    add_user("ji","jey")
+    command = 'INSERT INTO movies VALUES("' + name + '","' + description + '","' + reviews + '","' + recommendation + '",' + str(rating) + ')'
+    #" + str(rating) + "
     c.execute(command)
     db.commit()
     db.close()
@@ -70,7 +77,8 @@ def auth_user(username,password):
         return False
     db.commit()
     db.close()
-    
-create_db()
-add_user("hi","hey")
-add_movie("The Dark Knight Rises")
+
+
+#create_db()
+#add_user("hi","hey")
+#add_movie("The Dark Knight Rises")
