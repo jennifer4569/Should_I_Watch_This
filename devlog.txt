@@ -110,3 +110,6 @@ Made it so the databases connected to the APIs for the movies and stored informa
 
 alessandroC -- 2017-11-27 13:01
 Added cr_acct template
+
+alessandroC -- 2017-11-27 13:06
+added foundation files
