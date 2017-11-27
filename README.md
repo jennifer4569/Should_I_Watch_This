@@ -62,3 +62,4 @@ ___
 	        ```
 6. Run the program.
    * ```python app.py```
+7. Go to your web browser, and open *localhost:5000*
