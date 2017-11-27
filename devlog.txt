@@ -78,6 +78,9 @@ Fixed opening database if it already exists (try/except block)
 ibnulJ -- 2017-11-22 13:01:03
 Added the beginning basic methods required for building and adding to databases
 
+alessandroC -- 2017-11-22 13:05
+Fixed home link on footer
+
 jenniferZ -- 2017-11-25 19:34:11
 updated README and worked on API movie search
 
@@ -89,6 +92,9 @@ Facilitated working with database from app.py
 
 michaelR -- 2017-11-25 20:27:09
 worked on TasteDive API
+
+alessandroC -- 2017-11-26 17:05
+Added display template
 
 michaelR -- 2017-11-26 17:29
 facilitated display of recommended movies based on query - problems loading API key present
@@ -102,3 +108,5 @@ added OMDB API to display page
 ibnulJ -- 2017-11-26 22:36:35
 Made it so the databases connected to the APIs for the movies and stored information from them
 
+alessandroC -- 2017-11-27 13:01
+Added cr_acct template
