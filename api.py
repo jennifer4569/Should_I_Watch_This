@@ -1,5 +1,3 @@
-omdb_url = "http://www.omdbapi.com/?i=tt3896198&apikey=4aa872c2"
-nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=206f825296f14c518e3d3cc35b7272a5"
 
 import urllib2
 import json
