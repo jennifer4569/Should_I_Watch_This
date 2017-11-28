@@ -18,7 +18,7 @@ def search():
         if util.db_builder.check_movie(movie):
             print "movie was already in database"
         else:
-            #print "movie not in database"
+            print "movie not in database"
             omdb_info = api.omdb_info(movie)
             description = omdb_info['Plot']
             reviews = ''
@@ -31,15 +31,15 @@ def search():
         #NYT API-------------------------------------------------
         nyt_info = api.nyt_info(movie)
         print "is in nyt"
-        #print nyt_info
+        print nyt_info
         nyt_results = nyt_info['results']
-        #print nyt_results
+        print nyt_results
         NYT_link = nyt_results[0]['link']['url']
-        #print NYT_link
+        print NYT_link
         NYT_desc = nyt_results[0]['link']['suggested_link_text']
-        #print NYT_desc
+        print NYT_desc
         #--------------------------------------------------------
-
+        print "stuff"
         #OMDB API-----------------------------------------------=
         omdb_info = api.omdb_info(movie)
         print "is in omdb"
