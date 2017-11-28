@@ -24,6 +24,7 @@ def search():
             reviews = ''
             recommendation = ''
             rating = omdb_info['imdbRating']
+            print "I am here"
             #print movie,description,reviews,recommendation,rating
             util.db_builder.add_movie(movie,description,reviews,recommendation,rating)
             print "movie now in database"

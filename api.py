@@ -15,7 +15,7 @@ def omdb_info(title):
         udict = json.loads(uread)
         print "hello"
         if udict['Response'] == "False":
-            d = {'Director':'N/A', 'Plot':'N/A', 'Actors':'N/A', 'Poster':'http://sadcatdiary.com/wp-content/uploads/2015/07/sadcatsmall.jpg'}
+            d = {'Director':'N/A', 'Plot':'N/A', 'Actors':'N/A', 'Poster':'http://sadcatdiary.com/wp-content/uploads/2015/07/sadcatsmall.jpg', 'imdbRating':-1}
             print "sometsrhing"
             return d
         return udict
