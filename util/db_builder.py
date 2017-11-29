@@ -21,7 +21,9 @@ def create_db():
     db.commit()
     db.close()
 
-def add_user(username, password):
+def add_user(username,password):
+    if is_duplicate(username):
+        return False
     db = sqlite3.connect(f)
     c = db.cursor()
     command = "SELECT id FROM users ORDER BY id DESC"
@@ -35,6 +37,20 @@ def add_user(username, password):
     c.execute(command)
     db.commit()
     db.close()
+    return True
+
+def is_duplicate(username):
+    db = sqlite3.connect(f)
+    c = db.cursor()
+    command = "SELECT username FROM users"
+    for row in c.execute(command):
+        if username == row[0]:
+            return True
+    return False
+    db.commit()
+    db.close()
+
+
 
 def add_movie(name,description,reviews,recommendation,rating):
     #reviews = omdb_info['Plot']
@@ -68,13 +84,19 @@ def auth_user(username,password):
     command = "SELECT username,password FROM users"
     d = {}
     for row in c.execute(command):
+        print 'This is the row:    '
+        print row
         d[row[0]] = row[1]
+        print d
     if username in d:
         if d[username] == password:
+            print 'true'
             return True
         else:
+            print '1'
             return False
     else:
+        print '2'
         return False
     db.commit()
     db.close()

@@ -10,6 +10,14 @@
 <!-- </head> -->
 
 {% block content%}
+
+{% if username is defined %}
+<div align="right">
+  Hello {{username}}
+  <hr>
+</div>
+{% endif %}
+
 <center>
   <h1>Should I Watch This?</h1>
 
@@ -25,9 +33,9 @@
 	<input type="submit" value="Search" class="success button hollow">
       </form>
   </div>
-  
+  <br><br>
   <hr>
-  
+  <br>
   <div class="row">
     <h3>Login</h3>
     <form action="/auth", method = "POST">
@@ -43,5 +51,7 @@
       <input type="submit" value="Login">
     </form>
   </div>
+  <br>
+  <h3><i>Don't have an account?</i> <a href="/createaccount">Create Account</a></h3>
 </center>
 {% endblock %}

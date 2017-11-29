@@ -1,15 +1,24 @@
 #!usr/bin/python
 
 from flask import Flask, session, render_template, request, redirect, url_for, flash
-
+import os, sys, sqlite3
 import util.db_builder
 import api
 
 app = Flask(__name__)
+app.secret_key = os.urandom(32)
 
 @app.route("/")
 def home():
+    if "username" in session:
+        print 100000000000000
+        return render_template("home.html", username = session['username'])
+    print 200000000000
     return render_template("home.html")
+
+@app.route("/createaccount", methods=["GET","POST"])
+def make_account():
+    return render_template("cr_acct.html")
 
 @app.route("/search", methods=["GET","POST"])
 def search():
@@ -79,6 +88,52 @@ def search():
     except:
         return redirect(url_for("home"))
 
+@app.route("/auth", methods=["GET","POST"])
+def auth():
+    try:
+        username = request.form.get('User')
+        password = request.form.get('Pass')
+        print 'cred'
+        print username, password
+        if util.db_builder.auth_user(username,password):
+            print 'session:  ',session
+            session['username'] = username
+            print 'omg'
+            session['password'] = password
+            print 'session:  ',session
+            print 'this the profile'
+            return redirect(url_for('profile'))
+        else:
+            print "invalid user/pass combo" #testing purposes
+            return redirect(url_for('home'))
+    except:
+        return redirect(url_for('home'))
+
+
+@app.route("/profile")
+def profile():
+    if "username" not in session:
+        return redirect(url_for("home"))
+    else:
+        return render_template("profile.html", username = session['username'])
+
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    try:
+	username = request.form['User']
+	password = request.form['Pass']
+	util.db_builder.add_user(username,password)
+	return redirect(url_for('home'))
+    except:
+	return redirect(url_for('home'))
+
+@app.route("/logout", methods=["GET", "POST"])
+def logout_route():
+    print 'logout'
+    if "username" in session:
+        session.pop("username")
+    return redirect("/")
+    
 if __name__ == "__main__":
     app.debug = True
     app.run()
