@@ -119,3 +119,12 @@ added method for authenticating login - to be improved
 
 michaelR -- 2017-11-29 00:12
 added method for creating account - to be improved
+
+alessandroC -- 2017-11-29 00:20
+troubleshooting foundation
+
+ibnulJ -- 2017-11-29 01:12
+added accounts
+
+alessandroC -- 2017-11-29 01:25
+finalize css
