@@ -1,3 +1,6 @@
+omdb_url = "http://www.omdbapi.com/?i=tt3896198&apikey=68f529d5"
+nyt_url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=13bd1098fdae4d12b07cdde85d95f589"
+tastedive_url = "https://tastedive.com/api/similar?k=291931-ShouldIW-GNKY3IJH"
 
 import urllib2
 import json
