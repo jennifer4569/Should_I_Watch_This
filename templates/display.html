@@ -6,15 +6,22 @@
 
 {% block content%}
 <center>
+<div class="row">
   <h1>{{title}}</h1>
   <img src={{poster}} alt="Poster for {{title}}" title="Poster for {{title}}">
   <h3>Director: {{director}}</h3>
   <h4>Actors: {{actors}}</h4>
   <p>{{plot}}</p>
   <br>
+</div>
+
+<div class="row">
   <h2>NYT Movie Review</h2>
   <a href={{review_link}} target="_blank">{{review_title}}</a>
   <br>
+</div>
+
+<div class="row">
   <h2>Recommended Related Movies</h2>
   
   <!--{{recommended}}-->
@@ -26,6 +33,7 @@
   {% if not recommended %}
       <i>Sorry, we have no recommendations for this film!</i>
   {% endif %}
-  
+</div>  
+
 </center>
 {% endblock %}

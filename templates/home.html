@@ -13,23 +13,35 @@
 <center>
   <h1>Should I Watch This?</h1>
 
-  <h3>Search for a Movie</h3>
-  <p>You do not need to be logged in for this!<p>
-  <br><form action="/search", method = "POST">
-    <input type="text" name="search" placeholder="Title"><br>
-    <input type="submit" value="Search" class="warning button hollow">
-  </form>
-
-  <br>
+  <div class="row">
+    <h3>Search for a Movie</h3>
+    <p>You do not need to be logged in for this!<p>
+      <br>
+      <form action="/search", method = "POST">
+	<div>
+	  <label>Movie</label>  
+	  <input type="text" name="search" placeholder="Title"><br>
+	</div>
+	<input type="submit" value="Search" class="success button hollow">
+      </form>
+  </div>
+  
   <hr>
-  <h3>Login</h3>
-  <form action="/auth", method = "POST">
-    <p>Enter login info</p>
-    <strong>Username:</strong>
-    <input type="text" name="User" placeholder="Username"><br>
-    <strong>Password:</strong>
-    <input type="password" name="Pass" placeholder="Password"><br>
-    <input type="submit" value="Login">
-  </form>
+  
+  <div class="row">
+    <h3>Login</h3>
+    <form action="/auth", method = "POST">
+      <p>Enter login info</p>
+      <div>
+	<label><strong>Username:</strong></label>
+	<input type="text" name="User" placeholder="Username"><br>
+      </div>
+      <div>
+	<label><strong>Password:</strong></label>
+	<input type="password" name="Pass" placeholder="Password"><br>
+      </div>
+      <input type="submit" value="Login">
+    </form>
+  </div>
 </center>
 {% endblock %}

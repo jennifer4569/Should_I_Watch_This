@@ -6,14 +6,20 @@
 
 {% block content%}
 <center>
-  <h1>Create Account</h1>
-  <form action="/signup", method = "POST">
-    <p>Enter login info</p>
-    <strong>Username:</strong>
-    <input type="text" name="User" placeholder="Username"><br>
-    <strong>Password:</strong>
-    <input type="password" name="Pass" placeholder="Password"><br>
-    <input type="submit" value="Create">
-  </form>
+  <div class="row">
+    <h1>Create Account</h1>
+    <form action="/signup", method = "POST">
+      <p>Enter login info</p>
+      <div>
+	<label><strong>Username:</strong></label>
+	<input type="text" name="User" placeholder="Username"><br>
+      </div>
+      <div>
+	<label><strong>Password:</strong></label>
+	<input type="password" name="Pass" placeholder="Password"><br>
+      </div>
+      <input type="submit" value="Create">
+    </form>
+  </div>
 </center>
 {% endblock %}

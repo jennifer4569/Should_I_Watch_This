@@ -6,17 +6,18 @@
 
 {% block content%}
 <center>
-  <h1>Your Profile</h1>
-  <table>
-    <tr>
-      <th>History</th>
-      <th>Liked</th>
-    </tr>
-    <tr>
-      <td>{{history}}</td>
-      <td>{{liked}}</td>
-    </tr>
-  </table>
-
+  <div class="row">
+    <h1>Your Profile</h1>
+    <table class="striped hover">
+      <tr>
+	<th>History</th>
+	<th>Liked</th>
+      </tr>
+      <tr>
+	<td>{{history}}</td>
+	<td>{{liked}}</td>
+      </tr>
+    </table>
+  </div>
 </center>
 {% endblock %}
