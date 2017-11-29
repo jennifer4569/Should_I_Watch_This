@@ -1,7 +1,3 @@
-omdb_url = 'http://www.omdbapi.com/?i=tt3896198&apikey=4aa872c2'
-nyt_url = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=206f825296f14c518e3d3cc35b7272a5'
-
-
 
 import urllib2
 import json
@@ -42,10 +38,22 @@ def nyt_info(title):
 def tastedive_info(title):
     try:
         global tastedive_url
-        url = tastedive_url + "&q=" + title.replace(" ", "%20")
-        uread = urllib2.urlopen(url).read()
+        print 'beginning'
+        url = tastedive_url + "&callback&q=" + title.replace(" ", "%20")
+        print url
+        #url = 'https://tastedive.com/api/similar?k=290651-Ibnul-FSIX5D63&q=ergsfd'
+        #uread = urllib2.urlopen(url).read()
+        #uread = urllib2.urlopen(urllib2.Request(url)).read()
+
+        opener = urllib2.build_opener()
+        opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+        response = opener.open(url)
+        uread = response.read()
+        
+        print 'urlreader'
         udict = json.loads(uread)
+        print 'json'
         return udict
     except:
-        print "Error: API key was set up incorrectly!"
+        print "Error: API key was set up incorrectly! tastedive"
         return -1

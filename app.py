@@ -55,8 +55,27 @@ def search():
             #TASTEDIVE = "No similar results found"
         #else:
             #results = tastedive_info['Results']
+            
+        print "tastedive"                          
+        tastedive_info = api.tastedive_info(movie) 
+        if tastedive_info == -1:                   
+            TASTEDIVE = "No similar results found" 
+            print TASTEDIVE                        
+            no_matches = True                      
+        else:
+            print tastedive_info
+            results = tastedive_info['Similar']['Results']
+            print 'results'
+            if len(results) == 0:
+                no_matches = True
+                print 'empty'
+            else:
+                #results is a list of dicts
+                for dict in results:               
+                    print 'Name: ',dict['Name'],"     "
+        print 'end of tastedive stuff'
         return render_template("display.html", title = TITLE, review_link = NYT_link, review_title = NYT_desc, \
-                               director = DIRECTOR, actors = ACTORS, plot = PLOT, poster = POSTER)
+                               director = DIRECTOR, actors = ACTORS, plot = PLOT, poster = POSTER, recommended = results)
     except:
         return redirect(url_for("home"))
 

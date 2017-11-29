@@ -16,10 +16,16 @@
   <a href={{review_link}} target="_blank">{{review_title}}</a>
   <br>
   <h2>Recommended Related Movies</h2>
+  
+  <!--{{recommended}}-->
+
   {% for rec in recommended %}
-	-{{rec[0]}}<br><br>
+      <i>-{{rec['Name']}}</i><br>
   {% endfor %}
-  {{tastedive_error}}
+
+  {% if not recommended %}
+      <i>Sorry, we have no recommendations for this film!</i>
+  {% endif %}
   
 </center>
 {% endblock %}
